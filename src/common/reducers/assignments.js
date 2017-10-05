@@ -1,5 +1,6 @@
 export const initialAssignmentsState = () => ({
   assignments: [
+    // {
     //id: '',
     //teacher_id: '',
     //student_id: '',
@@ -7,6 +8,7 @@ export const initialAssignmentsState = () => ({
     //is_complete: false,
     //grade: '',
     //questions: []
+    // }
   ]
 });
 
