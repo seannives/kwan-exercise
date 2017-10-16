@@ -28,5 +28,5 @@ export default function assignmentsReducer(state = initialAssignmentsState(), ac
   switch (action.type) {
     default:
       return state;
-    }
   }
+}
