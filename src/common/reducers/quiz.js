@@ -1,6 +1,7 @@
 /* quiz reducer
 
 */
+import { FETCH_QUIZ_SUCCESS } from '../constants/quiz';
 
 export const initialQuizState = () => ({
   id: '',
@@ -16,6 +17,12 @@ export const initialQuizState = () => ({
 
 export default function quizReducer(state = initialQuizState(), action = {}) {
   switch (action.type) {
+    case FETCH_QUIZ_SUCCESS:
+      return {
+        ...state,
+        ...action.payload.result,
+      };
+
     default:
       return state;
   }

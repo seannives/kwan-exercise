@@ -2,7 +2,7 @@
 - `api` is an abstraction of whatever api (axios or whatever) that you've got
 
 */
-import { FETCH_QUIZ_SUCCESS } from '../constants/quiz.js';
+import { FETCH_QUIZ_SUCCESS } from '../constants/quiz';
 
 export const fetchQuiz = (id) => 
   (dispatch, api) => {
