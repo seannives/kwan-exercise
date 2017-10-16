@@ -37,12 +37,24 @@ quiz_questions
   question_id
 
 assignments
+  id
   teacher_id
   student_id
   quiz_id
   due_date // this will be the end of the semester, in this exercise
   is_complete // boolean, when the student has completed the assignment
-  grade // in practice, the student would be evaluated on each question in the quiz which would role up to this grade
+  grade // the student would be evaluated on each question in the quiz which would role up to this grade
+
+// This stores the student's answer.  We can associate a grade with
+// the answer in here or move that elsewhere (which might be better?)
+assignment_quiz_answers
+  id
+  teacher_id
+  student_id
+  quiz_id
+  question_id
+  answer
+  grade
 
 "For each teacher total grade is accumulated over a semester per student" would be returned by the api,
 something along the lines of...
