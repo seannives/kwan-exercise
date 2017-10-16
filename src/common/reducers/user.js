@@ -1,3 +1,8 @@
+/* user reducer
+- Associated with the current application user (in other apps this is sometimes
+  a child of a 'session' object)
+*/
+
 export const initialUserState = () => ({
   id: '',
   name: '',
