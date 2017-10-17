@@ -23,8 +23,9 @@ export const fetchQuizSuccess = result => ({
 });
 
 // Create a quiz
-// NOTE: quiz payload for multiple choice would typically be a Question, an
-// array of possible answers keyed by an id, and then a correct answer
+// NOTE: quiz payload is a sequence of multiple choice questions.
+// Content for multiple choice questions would typically be the question text,
+// a sequence of possible answers keyed by an id, and then a correct answer
 // associated with one of the possible answers.
 // The quiz could be associated with the teacher based on auth token or
 // explicitly passed.
