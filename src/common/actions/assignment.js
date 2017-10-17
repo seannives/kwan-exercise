@@ -5,7 +5,10 @@ Student and teacher actions on a single assignment.
 NOTE: `api` is an abstraction of whatever api (axios or whatever) that you've got
 */
 
-import { FETCH_ASSIGNMENT_SUCCESS } from '../constants/assignment';
+import { 
+  ANSWER_QUESTION_SUCCESS,
+  FETCH_ASSIGNMENT_SUCCESS
+} from '../constants/assignment';
 
 
 // Student Actions
@@ -24,6 +27,22 @@ export const fetchAssignment = (id) => (
 
 export const fetchAssignmentSuccess = result => ({
   type: FETCH_ASSIGNMENT_SUCCESS,
+  payload: result
+});
+
+// Answer question
+export const answerQuestion = (assignment_id, question_id, answer_id) => (
+  (dispatch, api) => {
+    return api
+      .put(`/assignment/${id}/question/${question_id}`, answer_id)
+      .then(result => {
+        dispatch(answerQuestionSuccess(result));
+      });
+  };  
+);
+
+export const answerQuestionSuccess = result => ({
+  type: ANSWER_QUESTION_SUCCESS,
   payload: result
 });
 
