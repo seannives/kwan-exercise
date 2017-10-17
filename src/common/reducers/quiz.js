@@ -1,5 +1,6 @@
 /* quiz reducer
 
+A quiz, being sequence of questions, not associated with a due date or students.
 */
 import { FETCH_QUIZ_SUCCESS } from '../constants/quiz';
 

@@ -1,6 +1,7 @@
 /* user reducer
-- Associated with the current application user (in other apps this is sometimes
-  a child of a 'session' object)
+
+Associated with the current application user (in other apps this is sometimes
+a child of a 'session' object), either a teacher or student.
 */
 
 export const initialUserState = () => ({

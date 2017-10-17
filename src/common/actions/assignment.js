@@ -1,9 +1,34 @@
 /* assignment actions
-- Create an individual assignment (a quiz with a due date and maybe some students associated)
-- Grade an assignment
+
+Student and teacher actions on a single assignment.
 
 NOTE: `api` is an abstraction of whatever api (axios or whatever) that you've got
 */
+
+import { FETCH_ASSIGNMENT_SUCCESS } from '../constants/assignment';
+
+
+// Student Actions
+
+// Fetches an assignment with the student's current assignment state.
+// Uses auth_token or similar to identify the student.
+export const fetchAssignment = (id) => (
+  (dispatch, api) => {
+    return api
+      .get(`/assignment/${id}`)
+      .then(result => {
+        dispatch(fetchAssignmentSuccess(result));
+      });
+  };
+);
+
+export const fetchAssignmentSuccess = result => ({
+  type: FETCH_ASSIGNMENT_SUCCESS,
+  payload: result
+});
+
+
+// Teacher Actions
 
 // Create an assignment.  Pass quiz id, due_date, and an array of student ids.
 // NOTE: Some descriptive typing could substitute/improve upon the above commentary.

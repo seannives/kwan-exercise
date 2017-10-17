@@ -1,5 +1,6 @@
 /* assignments reducer
-- List of all assignments (quiz's given a due date)
+
+All assignments (quiz's given a due date) for a given teacher.
 - Potentially used for reporting/aggregate displays
 */
 

@@ -1,11 +1,12 @@
 /* quiz actions
-- Fetch a quiz
-- Create a quiz (sending a quiz payload)
+
+Teacher actions on a quiz.
 
 NOTE: `api` is an abstraction of whatever api (axios or whatever) that you've got
 */
 import { FETCH_QUIZ_SUCCESS } from '../constants/quiz';
 
+// Fetch a quiz and save to state
 export const fetchQuiz = (id) => (
   (dispatch, api) => {
     return api
@@ -21,6 +22,7 @@ export const fetchQuizSuccess = result => ({
   payload: result
 });
 
+// Create a quiz
 // NOTE: quiz payload for multiple choice would typically be a Question, an
 // array of possible answers keyed by an id, and then a correct answer
 // associated with one of the possible answers.
