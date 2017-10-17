@@ -1,8 +1,5 @@
 /* assignments reducer
 - List of all assignments (quiz's given a due date)
-- This is used to associate a quiz with one or more students
-- Potentially each student's answer could live under this structure, allowing the teacher
-  to grade a quiz for a given student
 - Potentially used for reporting/aggregate displays
 */
 
